@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>Talking Alarm Clock</title>
+  <link href='http://fonts.googleapis.com/css?family=Nova%20Mono' rel='stylesheet' type='text/css'>
+  <link href="./style.css" rel='stylesheet' type='text/css'>
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</head>
+<body>
+
+<div id="main">
+
+  <center>
+    <img src = './assets/images/alarm.gif' id="clock"  width="150" height="150"
+    role="button" tabindex="0"/>
+    <div id="current_time">00:00:00</div>
+  </center>
+
+  <div id="a1_wrap" class="alarm_wrap">
+    <label for="a1_on">Alarm 1</label>
+    <br>
+    <input id="a1_on" type="checkbox">
+    <input id="a1_tt" type="time" class="without_ampm" step="300" size="5">
+    <select id="a1_ampm">
+      <option>AM</option>
+      <option selected>PM</option>
+    </select>
+  </div>
+  <div id="a2_wrap" class="alarm_wrap">
+    <label for="a2_on">Alarm 2</label>
+    <br>
+    <input id="a2_on" type="checkbox">
+    <input id="a2_tt" type="time" class="without_ampm" step="300" size="5">
+    <select id="a2_ampm">
+      <option>AM</option>
+      <option selected>PM</option>
+    </select>
+  </div>
+
+  <div class="voice_options">
+    <div>
+      <div class="ctrl_label">
+        <label for="sound">Sound:</label>
+      </div>
+      <div class="ctrl_wrap">
+        <select id="sound" class="ctrl">
+          <option value="none">None</option>
+          <option selected value="cuckoo">Cuckoo Clock</option>
+          <option value="digital">Digital Alarm Clock</option>
+          <option value="ringing">Ringing Alarm Clock</option>
+        </select>
+
+        <button id="playsound" title="Play Sound">
+          <img src="./assets/images/play.png">
+        </button>
+      </div>
+
+      <div class="ctrl_label">
+        <label for="sound">Phrase (use $TIME to say time):</label>
+      </div>
+      <div class="ctrl_wrap">
+        <textarea id="phrase"></textarea>
+
+        <button id="playspeech" title="Play Speech">
+          <img src="./assets/images/play.png">
+        </button>
+      </div>
+      <div class="ctrl_wrap">
+        <select id="voice" class="ctrl" hidden></select>
+      </div>
+      <input type="hidden" id="rate" type="range" class="ctrl"
+      min=0.5 max=1.5 step=0.1 value=1.0></input>
+      <input type="hidden" id="volume" type="range" class="ctrl"
+               min=0.0 max=1.0 step=0.1 value=1.0></input>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
