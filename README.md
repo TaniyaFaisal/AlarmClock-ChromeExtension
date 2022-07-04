@@ -1,3 +1,3 @@
-#Alarm Clock - Chrome Extension
+# Alarm Clock - Chrome Extension
 
-![Alt text]("Alarm Clock")
+![Alt text](assets/images/AlarmClock.png "Alarm Clock")
